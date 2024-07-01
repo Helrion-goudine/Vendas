@@ -1,0 +1,8 @@
+.collapseOne{
+    display: flex;
+    flex-direction: column;
+}
+
+.accordion-button .collapseOne{
+    margin-top: 70px;
+}

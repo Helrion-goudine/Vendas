@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agência BRN</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/cart.css">
+    <link rel="stylesheet" href="/slider/slider.css">
+    <link rel="stylesheet" href="/CSS/acordion.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="interface">
+            <div class="logo">
+                <a href="#">
+                    <img src="/images/LOGO.png" alt="Logo da Agência BRN" style="width: 25%;">
+                </a>
+            </div><!-- logo -->
+
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a href="/index.html">Início</a></li>
+                    <li><a href="#">Especialidades</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Projetos</a></li>
+                </ul>
+            </nav>
+
+            <img id="icone-carrinho-desktop" src="/images-cart/icon-cart.svg" alt="Carrinho de compras">
+            <div class="nav-icon-container">
+            </div>
+
+            <div class="btn-contato">
+                <a href="#">
+                    <button>Contato</button>
+                </a>
+            </div><!-- btn-contato -->
+
+            <div class="btn-abrir-menu" id="btn-menu">
+                <i class="bi bi-list"></i>
+            </div>
+
+            <div class="menu-mobile" id="menu-mobile">
+                <div class="btn-fechar">
+                    <i class="bi bi-x-lg"></i>
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><a href="/index.html">Início</a></li>
+                        <li><a href="#">Especialidades</a></li>
+                        <li><a href="#">Sobre</a></li>
+                        <li><a href="#">Projetos</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </nav>
+
+                <img id="icone-carrinho-mobile" src="images-cart/icon-cart.svg" alt="Carrinho de compras">
+                <div class="nav-icon-container">
+                </div>
+
+            </div><!-- menu-mobile -->
+            <div class="overlay-menu" id="overlay-menu"></div>
+        </div><!-- interface -->
+    </header>
+
+    <div class="carrinho" id="carrinho">
+        <div class="carrinho-header">
+            <h2>Carrinho de Compras</h2>
+            <img id="icone-fechar-carrinho" src="/images-cart/x-circle.svg" alt="Fechar carrinho" style="width: 7%;">
+        </div>
+        <div class="produtos">
+            <p id="msg-carrinho-vazio" class="msg-carrinho-vazio">Seu carrinho está vazio.</p>
+        </div>
+
+        <button id="btn-concluir-compra">Concluir Compra</button>
+    </div>
+
+    <main>        
+        <section class="especiliadades">
+            <div class="interface">
+                <h2 class="titulo">Nossos <span> produtos. </span></h2>
+                
+                <div class="flex">
+                    <div class="especialidades-box">
+                        <img src="/images/image-product-1-thumbnail.jpg" alt="" srcset="">
+                        <h1 class="titulo" id="titulo">Sneakers</h1>
+                        <p class="descricao"></p>
+                        <div class="info-preco">
+                            <div class="info-preco-desconto">
+                                <span class="preco" id="preco">$125.00</span>
+                                <span class="desconto">50%</span>
+                            </div>
+                            <span class="preco-cheio">$250.00</span>
+                        </div>
+                        <div class="quantidade">
+                            <img id="quantidade-menos" src="/images-cart/icon-minus.svg" alt="Diminuir quantidade de produtos">
+                            <span id="quantidade">1</span>
+                            <img id="quantidade-mais" src="/images-cart/icon-plus.svg" alt="Aumentar quantidade de produtos">
+                        </div>
+                        <button class="botaoAdicionarCarrinho" id="botaoAdicionarCarrinho">
+                            <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M21.765 7.236c-.258-3.775-3.346-6.486-7.121-6.225-1.986.126-3.676 1.596-4.451 3.586-.109.281-.351.472-.655.488L.303 6.839a.507.507 0 0 0-.302.464c.03.382.379.664.754.664h1.548l3.322 9.496c.135.386.509.644.934.644h9.824c.465 0 .88-.269 1.074-.692l4.535-10.316a.505.505 0 0 0-.038-.437zm-1.507-.614-4.486 10.205a.51.51 0 0 1-.474.307H7.522L4.22 7.41l-.057-.156c-.159-.413-.541-.67-.974-.67H1.58L2.77 5.09c.083-.267.33-.465.627-.488.01-.001.02-.001.03-.001.34-.012.656.201.79.52.068.175.234.295.424.295h10.98c.414 0 .761-.312.806-.724l.329-2.99c.066-.6.56-1.048 1.162-1.048.097 0 .19.012.283.035.545.128.899.661.77 1.202z"
+                                    fill="#FFF" fill-rule="nonzero">
+                                </path>
+                            </svg>
+                            <p id="botaoAdicionarTexto" class="textButtonCarrinho">Adicionar ao carrinho</p>
+                        </button>
+                    </div><!--especialidades-box-->
+
+                    <div class="especialidades-box">
+                        <img src="/images/image-product-1-thumbnail.jpg" alt="" srcset="">
+                        <h1 class="titulo" id="titulo">Sneakers</h1>
+                        <p class="descricao"></p>
+                        <div class="info-preco">
+                            <div class="info-preco-desconto">
+                                <span class="preco" id="preco">$125.00</span>
+                                <span class="desconto">50%</span>
+                            </div>
+                            <span class="preco-cheio">$250.00</span>
+                        </div>
+                        <div class="quantidade">
+                            <img id="quantidade-menos" src="/images-cart/icon-minus.svg" alt="Diminuir quantidade de produtos">
+                            <span id="quantidade">1</span>
+                            <img id="quantidade-mais" src="/images-cart/icon-plus.svg" alt="Aumentar quantidade de produtos">
+                        </div>
+                        <button class="botaoAdicionarCarrinho" id="botaoAdicionarCarrinho">
+                            <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M21.765 7.236c-.258-3.775-3.346-6.486-7.121-6.225-1.986.126-3.676 1.596-4.451 3.586-.109.281-.351.472-.655.488L.303 6.839a.507.507 0 0 0-.302.464c.03.382.379.664.754.664h1.548l3.322 9.496c.135.386.509.644.934.644h9.824c.465 0 .88-.269 1.074-.692l4.535-10.316a.505.505 0 0 0-.038-.437zm-1.507-.614-4.486 10.205a.51.51 0 0 1-.474.307H7.522L4.22 7.41l-.057-.156c-.159-.413-.541-.67-.974-.67H1.58L2.77 5.09c.083-.267.33-.465.627-.488.01-.001.02-.001.03-.001.34-.012.656.201.79.52.068.175.234.295.424.295h10.98c.414 0 .761-.312.806-.724l.329-2.99c.066-.6.56-1.048 1.162-1.048.097 0 .19.012.283.035.545.128.899.661.77 1.202z"
+                                    fill="#FFF" fill-rule="nonzero">
+                                </path>
+                            </svg>
+                            <p id="botaoAdicionarTexto" class="textButtonCarrinho">Adicionar ao carrinho</p>
+                        </button>
+                    </div><!--especialidades-box-->
+
+                    <div class="especialidades-box">
+                        <img src="/images/image-product-1-thumbnail.jpg" alt="" srcset="">
+                        <h1 class="titulo" id="titulo">Sneakers</h1>
+                        <p class="descricao"></p>
+                        <div class="info-preco">
+                            <div class="info-preco-desconto">
+                                <span class="preco" id="preco">$125.00</span>
+                                <span class="desconto">50%</span>
+                            </div>
+                            <span class="preco-cheio">$250.00</span>
+                        </div>
+                        <div class="quantidade">
+                            <img id="quantidade-menos" src="/images-cart/icon-minus.svg" alt="Diminuir quantidade de produtos">
+                            <span id="quantidade">1</span>
+                            <img id="quantidade-mais" src="/images-cart/icon-plus.svg" alt="Aumentar quantidade de produtos">
+                        </div>
+                        <button class="botaoAdicionarCarrinho" id="botaoAdicionarCarrinho">
+                            <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M21.765 7.236c-.258-3.775-3.346-6.486-7.121-6.225-1.986.126-3.676 1.596-4.451 3.586-.109.281-.351.472-.655.488L.303 6.839a.507.507 0 0 0-.302.464c.03.382.379.664.754.664h1.548l3.322 9.496c.135.386.509.644.934.644h9.824c.465 0 .88-.269 1.074-.692l4.535-10.316a.505.505 0 0 0-.038-.437zm-1.507-.614-4.486 10.205a.51.51 0 0 1-.474.307H7.522L4.22 7.41l-.057-.156c-.159-.413-.541-.67-.974-.67H1.58L2.77 5.09c.083-.267.33-.465.627-.488.01-.001.02-.001.03-.001.34-.012.656.201.79.52.068.175.234.295.424.295h10.98c.414 0 .761-.312.806-.724l.329-2.99c.066-.6.56-1.048 1.162-1.048.097 0 .19.012.283.035.545.128.899.661.77 1.202z"
+                                    fill="#FFF" fill-rule="nonzero">
+                                </path>
+                            </svg>
+                            <p id="botaoAdicionarTexto" class="textButtonCarrinho">Adicionar ao carrinho</p>
+                        </button>
+
+                    </div><!--especialidades-box-->
+                    <div class="especialidades-box">
+                        <img src="/images/image-product-1-thumbnail.jpg" alt="" srcset="">
+                        <h1 class="titulo" id="titulo">Sneakers</h1>
+                        <p class="descricao"></p>
+                        <div class="info-preco">
+                            <div class="info-preco-desconto">
+                                <span class="preco" id="preco">$125.00</span>
+                                <span class="desconto">50%</span>
+                            </div>
+                            <span class="preco-cheio">$250.00</span>
+                        </div>
+                        <div class="quantidade">
+                            <img id="quantidade-menos" src="/images-cart/icon-minus.svg" alt="Diminuir quantidade de produtos">
+                            <span id="quantidade">1</span>
+                            <img id="quantidade-mais" src="/images-cart/icon-plus.svg" alt="Aumentar quantidade de produtos">
+                        </div>
+                        <button class="botaoAdicionarCarrinho" id="botaoAdicionarCarrinho">
+                            <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M21.765 7.236c-.258-3.775-3.346-6.486-7.121-6.225-1.986.126-3.676 1.596-4.451 3.586-.109.281-.351.472-.655.488L.303 6.839a.507.507 0 0 0-.302.464c.03.382.379.664.754.664h1.548l3.322 9.496c.135.386.509.644.934.644h9.824c.465 0 .88-.269 1.074-.692l4.535-10.316a.505.505 0 0 0-.038-.437zm-1.507-.614-4.486 10.205a.51.51 0 0 1-.474.307H7.522L4.22 7.41l-.057-.156c-.159-.413-.541-.67-.974-.67H1.58L2.77 5.09c.083-.267.33-.465.627-.488.01-.001.02-.001.03-.001.34-.012.656.201.79.52.068.175.234.295.424.295h10.98c.414 0 .761-.312.806-.724l.329-2.99c.066-.6.56-1.048 1.162-1.048.097 0 .19.012.283.035.545.128.899.661.77 1.202z"
+                                    fill="#FFF" fill-rule="nonzero">
+                                </path>
+                            </svg>
+                            <p id="botaoAdicionarTexto" class="textButtonCarrinho">Adicionar ao carrinho</p>
+                        </button>
+                    </div><!--especialidades-box-->
+                </div><!--flex-->
+
+                <div class="flex">
+                    <div class="especialidades-box">
+                        <img src="/images/image-product-1-thumbnail.jpg" alt="" srcset="">
+                        <h1 class="titulo" id="titulo">Sneakers</h1>
+                        <p class="descricao"></p>
+                        <div class="info-preco">
+                            <div class="info-preco-desconto">
+                                <span class="preco" id="preco">$125.00</span>
+                                <span class="desconto">50%</span>
+                            </div>
+                            <span class="preco-cheio">$250.00</span>
+                        </div>
+                        <div class="quantidade">
+                            <img id="quantidade-menos" src="/images-cart/icon-minus.svg" alt="Diminuir quantidade de produtos">
+                            <span id="quantidade">1</span>
+                            <img id="quantidade-mais" src="/images-cart/icon-plus.svg" alt="Aumentar quantidade de produtos">
+                        </div>
+                        <button class="botaoAdicionarCarrinho" id="botaoAdicionarCarrinho">
+                            <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M21.765 7.236c-.258-3.775-3.346-6.486-7.121-6.225-1.986.126-3.676 1.596-4.451 3.586-.109.281-.351.472-.655.488L.303 6.839a.507.507 0 0 0-.302.464c.03.382.379.664.754.664h1.548l3.322 9.496c.135.386.509.644.934.644h9.824c.465 0 .88-.269 1.074-.692l4.535-10.316a.505.505 0 0 0-.038-.437zm-1.507-.614-4.486 10.205a.51.51 0 0 1-.474.307H7.522L4.22 7.41l-.057-.156c-.159-.413-.541-.67-.974-.67H1.58L2.77 5.09c.083-.267.33-.465.627-.488.01-.001.02-.001.03-.001.34-.012.656.201.79.52.068.175.234.295.424.295h10.98c.414 0 .761-.312.806-.724l.329-2.99c.066-.6.56-1.048 1.162-1.048.097 0 .19.012.283.035.545.128.899.661.77 1.202z"
+                                    fill="#FFF" fill-rule="nonzero">
+                                </path>
+                            </svg>
+                            <p id="botaoAdicionarTexto" class="textButtonCarrinho">Adicionar ao carrinho</p>
+                        </button>
+                    </div><!--especialidades-box-->
+
+                    <div class="especialidades-box">
+                        <img src="/images/image-product-1-thumbnail.jpg" alt="" srcset="">
+                        <h1 class="titulo" id="titulo">Sneakers</h1>
+                        <p class="descricao"></p>
+                        <div class="info-preco">
+                            <div class="info-preco-desconto">
+                                <span class="preco" id="preco">$125.00</span>
+                                <span class="desconto">50%</span>
+                            </div>
+                            <span class="preco-cheio">$250.00</span>
+                        </div>
+                        <div class="quantidade">
+                            <img id="quantidade-menos" src="/images-cart/icon-minus.svg" alt="Diminuir quantidade de produtos">
+                            <span id="quantidade">1</span>
+                            <img id="quantidade-mais" src="/images-cart/icon-plus.svg" alt="Aumentar quantidade de produtos">
+                        </div>
+                        <button class="botaoAdicionarCarrinho" id="botaoAdicionarCarrinho">
+                            <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M21.765 7.236c-.258-3.775-3.346-6.486-7.121-6.225-1.986.126-3.676 1.596-4.451 3.586-.109.281-.351.472-.655.488L.303 6.839a.507.507 0 0 0-.302.464c.03.382.379.664.754.664h1.548l3.322 9.496c.135.386.509.644.934.644h9.824c.465 0 .88-.269 1.074-.692l4.535-10.316a.505.505 0 0 0-.038-.437zm-1.507-.614-4.486 10.205a.51.51 0 0 1-.474.307H7.522L4.22 7.41l-.057-.156c-.159-.413-.541-.67-.974-.67H1.58L2.77 5.09c.083-.267.33-.465.627-.488.01-.001.02-.001.03-.001.34-.012.656.201.79.52.068.175.234.295.424.295h10.98c.414 0 .761-.312.806-.724l.329-2.99c.066-.6.56-1.048 1.162-1.048.097 0 .19.012.283.035.545.128.899.661.77 1.202z"
+                                    fill="#FFF" fill-rule="nonzero">
+                                </path>
+                            </svg>
+                            <p id="botaoAdicionarTexto" class="textButtonCarrinho">Adicionar ao carrinho</p>
+                        </button>
+                    </div><!--especialidades-box-->
+                    
+                    <div class="especialidades-box">
+                        <img src="/images/image-product-1-thumbnail.jpg" alt="" srcset="">
+                        <h1 class="titulo" id="titulo">Sneakers</h1>
+                        <p class="descricao"></p>
+                        <div class="info-preco">
+                            <div class="info-preco-desconto">
+                                <span class="preco" id="preco">$125.00</span>
+                                <span class="desconto">50%</span>
+                            </div>
+                            <span class="preco-cheio">$250.00</span>
+                        </div>
+                        <div class="quantidade">
+                            <img id="quantidade-menos" src="/images-cart/icon-minus.svg" alt="Diminuir quantidade de produtos">
+                            <span id="quantidade">1</span>
+                            <img id="quantidade-mais" src="/images-cart/icon-plus.svg" alt="Aumentar quantidade de produtos">
+                        </div>
+                        <button class="botaoAdicionarCarrinho" id="botaoAdicionarCarrinho">
+                            <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M21.765 7.236c-.258-3.775-3.346-6.486-7.121-6.225-1.986.126-3.676 1.596-4.451 3.586-.109.281-.351.472-.655.488L.303 6.839a.507.507 0 0 0-.302.464c.03.382.379.664.754.664h1.548l3.322 9.496c.135.386.509.644.934.644h9.824c.465 0 .88-.269 1.074-.692l4.535-10.316a.505.505 0 0 0-.038-.437zm-1.507-.614-4.486 10.205a.51.51 0 0 1-.474.307H7.522L4.22 7.41l-.057-.156c-.159-.413-.541-.67-.974-.67H1.58L2.77 5.09c.083-.267.33-.465.627-.488.01-.001.02-.001.03-.001.34-.012.656.201.79.52.068.175.234.295.424.295h10.98c.414 0 .761-.312.806-.724l.329-2.99c.066-.6.56-1.048 1.162-1.048.097 0 .19.012.283.035.545.128.899.661.77 1.202z"
+                                    fill="#FFF" fill-rule="nonzero">
+                                </path>
+                            </svg>
+                            <p id="botaoAdicionarTexto" class="textButtonCarrinho">Adicionar ao carrinho</p>
+                        </button>
+
+                    </div><!--especialidades-box-->
+                    <div class="especialidades-box">
+                        <img src="/images/image-product-1-thumbnail.jpg" alt="" srcset="">
+                        <h1 class="titulo" id="titulo">Sneakers</h1>
+                        <p class="descricao"></p>
+                        <div class="info-preco">
+                            <div class="info-preco-desconto">
+                                <span class="preco" id="preco">$125.00</span>
+                                <span class="desconto">50%</span>
+                            </div>
+                            <span class="preco-cheio">$250.00</span>
+                        </div>
+                        <div class="quantidade">
+                            <img id="quantidade-menos" src="/images-cart/icon-minus.svg" alt="Diminuir quantidade de produtos">
+                            <span id="quantidade">1</span>
+                            <img id="quantidade-mais" src="/images-cart/icon-plus.svg" alt="Aumentar quantidade de produtos">
+                        </div>
+                        <button class="botaoAdicionarCarrinho" id="botaoAdicionarCarrinho">
+                            <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M21.765 7.236c-.258-3.775-3.346-6.486-7.121-6.225-1.986.126-3.676 1.596-4.451 3.586-.109.281-.351.472-.655.488L.303 6.839a.507.507 0 0 0-.302.464c.03.382.379.664.754.664h1.548l3.322 9.496c.135.386.509.644.934.644h9.824c.465 0 .88-.269 1.074-.692l4.535-10.316a.505.505 0 0 0-.038-.437zm-1.507-.614-4.486 10.205a.51.51 0 0 1-.474.307H7.522L4.22 7.41l-.057-.156c-.159-.413-.541-.67-.974-.67H1.58L2.77 5.09c.083-.267.33-.465.627-.488.01-.001.02-.001.03-.001.34-.012.656.201.79.52.068.175.234.295.424.295h10.98c.414 0 .761-.312.806-.724l.329-2.99c.066-.6.56-1.048 1.162-1.048.097 0 .19.012.283.035.545.128.899.661.77 1.202z"
+                                    fill="#FFF" fill-rule="nonzero">
+                                </path>
+                            </svg>
+                            <p id="botaoAdicionarTexto" class="textButtonCarrinho">Adicionar ao carrinho</p>
+                        </button>
+                    </div><!--especialidades-box-->
+                </div><!--flex-->
+
+                <div class="flex">
+                    <div class="especialidades-box">
+                        <img src="/images/image-product-1-thumbnail.jpg" alt="" srcset="">
+                        <h1 class="titulo" id="titulo">Sneakers</h1>
+                        <p class="descricao"></p>
+                        <div class="info-preco">
+                            <div class="info-preco-desconto">
+                                <span class="preco" id="preco">$125.00</span>
+                                <span class="desconto">50%</span>
+                            </div>
+                            <span class="preco-cheio">$250.00</span>
+                        </div>
+                        <div class="quantidade">
+                            <img id="quantidade-menos" src="/images-cart/icon-minus.svg" alt="Diminuir quantidade de produtos">
+                            <span id="quantidade">1</span>
+                            <img id="quantidade-mais" src="/images-cart/icon-plus.svg" alt="Aumentar quantidade de produtos">
+                        </div>
+                        <button class="botaoAdicionarCarrinho" id="botaoAdicionarCarrinho">
+                            <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M21.765 7.236c-.258-3.775-3.346-6.486-7.121-6.225-1.986.126-3.676 1.596-4.451 3.586-.109.281-.351.472-.655.488L.303 6.839a.507.507 0 0 0-.302.464c.03.382.379.664.754.664h1.548l3.322 9.496c.135.386.509.644.934.644h9.824c.465 0 .88-.269 1.074-.692l4.535-10.316a.505.505 0 0 0-.038-.437zm-1.507-.614-4.486 10.205a.51.51 0 0 1-.474.307H7.522L4.22 7.41l-.057-.156c-.159-.413-.541-.67-.974-.67H1.58L2.77 5.09c.083-.267.33-.465.627-.488.01-.001.02-.001.03-.001.34-.012.656.201.79.52.068.175.234.295.424.295h10.98c.414 0 .761-.312.806-.724l.329-2.99c.066-.6.56-1.048 1.162-1.048.097 0 .19.012.283.035.545.128.899.661.77 1.202z"
+                                    fill="#FFF" fill-rule="nonzero">
+                                </path>
+                            </svg>
+                            <p id="botaoAdicionarTexto" class="textButtonCarrinho">Adicionar ao carrinho</p>
+                        </button>
+                    </div><!--especialidades-box-->
+
+                    <div class="especialidades-box">
+                        <img src="/images/image-product-1-thumbnail.jpg" alt="" srcset="">
+                        <h1 class="titulo" id="titulo">Sneakers</h1>
+                        <p class="descricao"></p>
+                        <div class="info-preco">
+                            <div class="info-preco-desconto">
+                                <span class="preco" id="preco">$125.00</span>
+                                <span class="desconto">50%</span>
+                            </div>
+                            <span class="preco-cheio">$250.00</span>
+                        </div>
+                        <div class="quantidade">
+                            <img id="quantidade-menos" src="/images-cart/icon-minus.svg" alt="Diminuir quantidade de produtos">
+                            <span id="quantidade">1</span>
+                            <img id="quantidade-mais" src="/images-cart/icon-plus.svg" alt="Aumentar quantidade de produtos">
+                        </div>
+                        <button class="botaoAdicionarCarrinho" id="botaoAdicionarCarrinho">
+                            <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M21.765 7.236c-.258-3.775-3.346-6.486-7.121-6.225-1.986.126-3.676 1.596-4.451 3.586-.109.281-.351.472-.655.488L.303 6.839a.507.507 0 0 0-.302.464c.03.382.379.664.754.664h1.548l3.322 9.496c.135.386.509.644.934.644h9.824c.465 0 .88-.269 1.074-.692l4.535-10.316a.505.505 0 0 0-.038-.437zm-1.507-.614-4.486 10.205a.51.51 0 0 1-.474.307H7.522L4.22 7.41l-.057-.156c-.159-.413-.541-.67-.974-.67H1.58L2.77 5.09c.083-.267.33-.465.627-.488.01-.001.02-.001.03-.001.34-.012.656.201.79.52.068.175.234.295.424.295h10.98c.414 0 .761-.312.806-.724l.329-2.99c.066-.6.56-1.048 1.162-1.048.097 0 .19.012.283.035.545.128.899.661.77 1.202z"
+                                    fill="#FFF" fill-rule="nonzero">
+                                </path>
+                            </svg>
+                            <p id="botaoAdicionarTexto" class="textButtonCarrinho">Adicionar ao carrinho</p>
+                        </button>
+                    </div><!--especialidades-box-->
+                    
+                    <div class="especialidades-box">
+                        <img src="/images/image-product-1-thumbnail.jpg" alt="" srcset="">
+                        <h1 class="titulo" id="titulo">Sneakers</h1>
+                        <p class="descricao"></p>
+                        <div class="info-preco">
+                            <div class="info-preco-desconto">
+                                <span class="preco" id="preco">$125.00</span>
+                                <span class="desconto">50%</span>
+                            </div>
+                            <span class="preco-cheio">$250.00</span>
+                        </div>
+                        <div class="quantidade">
+                            <img id="quantidade-menos" src="/images-cart/icon-minus.svg" alt="Diminuir quantidade de produtos">
+                            <span id="quantidade">1</span>
+                            <img id="quantidade-mais" src="/images-cart/icon-plus.svg" alt="Aumentar quantidade de produtos">
+                        </div>
+                        <button class="botaoAdicionarCarrinho" id="botaoAdicionarCarrinho">
+                            <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M21.765 7.236c-.258-3.775-3.346-6.486-7.121-6.225-1.986.126-3.676 1.596-4.451 3.586-.109.281-.351.472-.655.488L.303 6.839a.507.507 0 0 0-.302.464c.03.382.379.664.754.664h1.548l3.322 9.496c.135.386.509.644.934.644h9.824c.465 0 .88-.269 1.074-.692l4.535-10.316a.505.505 0 0 0-.038-.437zm-1.507-.614-4.486 10.205a.51.51 0 0 1-.474.307H7.522L4.22 7.41l-.057-.156c-.159-.413-.541-.67-.974-.67H1.58L2.77 5.09c.083-.267.33-.465.627-.488.01-.001.02-.001.03-.001.34-.012.656.201.79.52.068.175.234.295.424.295h10.98c.414 0 .761-.312.806-.724l.329-2.99c.066-.6.56-1.048 1.162-1.048.097 0 .19.012.283.035.545.128.899.661.77 1.202z"
+                                    fill="#FFF" fill-rule="nonzero">
+                                </path>
+                            </svg>
+                            <p id="botaoAdicionarTexto" class="textButtonCarrinho">Adicionar ao carrinho</p>
+                        </button>
+
+                    </div><!--especialidades-box-->
+                    <div class="especialidades-box">
+                        <img src="/images/image-product-1-thumbnail.jpg" alt="" srcset="">
+                        <h1 class="titulo" id="titulo">Sneakers</h1>
+                        <p class="descricao"></p>
+                        <div class="info-preco">
+                            <div class="info-preco-desconto">
+                                <span class="preco" id="preco">$125.00</span>
+                                <span class="desconto">50%</span>
+                            </div>
+                            <span class="preco-cheio">$250.00</span>
+                        </div>
+                        <div class="quantidade">
+                            <img id="quantidade-menos" src="/images-cart/icon-minus.svg" alt="Diminuir quantidade de produtos">
+                            <span id="quantidade">1</span>
+                            <img id="quantidade-mais" src="/images-cart/icon-plus.svg" alt="Aumentar quantidade de produtos">
+                        </div>
+                        <button class="botaoAdicionarCarrinho" id="botaoAdicionarCarrinho">
+                            <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M21.765 7.236c-.258-3.775-3.346-6.486-7.121-6.225-1.986.126-3.676 1.596-4.451 3.586-.109.281-.351.472-.655.488L.303 6.839a.507.507 0 0 0-.302.464c.03.382.379.664.754.664h1.548l3.322 9.496c.135.386.509.644.934.644h9.824c.465 0 .88-.269 1.074-.692l4.535-10.316a.505.505 0 0 0-.038-.437zm-1.507-.614-4.486 10.205a.51.51 0 0 1-.474.307H7.522L4.22 7.41l-.057-.156c-.159-.413-.541-.67-.974-.67H1.58L2.77 5.09c.083-.267.33-.465.627-.488.01-.001.02-.001.03-.001.34-.012.656.201.79.52.068.175.234.295.424.295h10.98c.414 0 .761-.312.806-.724l.329-2.99c.066-.6.56-1.048 1.162-1.048.097 0 .19.012.283.035.545.128.899.661.77 1.202z"
+                                    fill="#FFF" fill-rule="nonzero">
+                                </path>
+                            </svg>
+                            <p id="botaoAdicionarTexto" class="textButtonCarrinho">Adicionar ao carrinho</p>
+                        </button>
+                    </div><!--especialidades-box-->
+                </div><!--flex-->
+
+                <div class="flex">
+                    <div class="especialidades-box">
+                        <img src="/images/image-product-1-thumbnail.jpg" alt="" srcset="">
+                        <h1 class="titulo" id="titulo">Sneakers</h1>
+                        <p class="descricao"></p>
+                        <div class="info-preco">
+                            <div class="info-preco-desconto">
+                                <span class="preco" id="preco">$125.00</span>
+                                <span class="desconto">50%</span>
+                            </div>
+                            <span class="preco-cheio">$250.00</span>
+                        </div>
+                        <div class="quantidade">
+                            <img id="quantidade-menos" src="/images-cart/icon-minus.svg" alt="Diminuir quantidade de produtos">
+                            <span id="quantidade">1</span>
+                            <img id="quantidade-mais" src="/images-cart/icon-plus.svg" alt="Aumentar quantidade de produtos">
+                        </div>
+                        <button class="botaoAdicionarCarrinho" id="botaoAdicionarCarrinho">
+                            <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M21.765 7.236c-.258-3.775-3.346-6.486-7.121-6.225-1.986.126-3.676 1.596-4.451 3.586-.109.281-.351.472-.655.488L.303 6.839a.507.507 0 0 0-.302.464c.03.382.379.664.754.664h1.548l3.322 9.496c.135.386.509.644.934.644h9.824c.465 0 .88-.269 1.074-.692l4.535-10.316a.505.505 0 0 0-.038-.437zm-1.507-.614-4.486 10.205a.51.51 0 0 1-.474.307H7.522L4.22 7.41l-.057-.156c-.159-.413-.541-.67-.974-.67H1.58L2.77 5.09c.083-.267.33-.465.627-.488.01-.001.02-.001.03-.001.34-.012.656.201.79.52.068.175.234.295.424.295h10.98c.414 0 .761-.312.806-.724l.329-2.99c.066-.6.56-1.048 1.162-1.048.097 0 .19.012.283.035.545.128.899.661.77 1.202z"
+                                    fill="#FFF" fill-rule="nonzero">
+                                </path>
+                            </svg>
+                            <p id="botaoAdicionarTexto" class="textButtonCarrinho">Adicionar ao carrinho</p>
+                        </button>
+                    </div><!--especialidades-box-->
+
+                    <div class="especialidades-box">
+                        <img src="/images/image-product-1-thumbnail.jpg" alt="" srcset="">
+                        <h1 class="titulo" id="titulo">Sneakers</h1>
+                        <p class="descricao"></p>
+                        <div class="info-preco">
+                            <div class="info-preco-desconto">
+                                <span class="preco" id="preco">$125.00</span>
+                                <span class="desconto">50%</span>
+                            </div>
+                            <span class="preco-cheio">$250.00</span>
+                        </div>
+                        <div class="quantidade">
+                            <img id="quantidade-menos" src="/images-cart/icon-minus.svg" alt="Diminuir quantidade de produtos">
+                            <span id="quantidade">1</span>
+                            <img id="quantidade-mais" src="/images-cart/icon-plus.svg" alt="Aumentar quantidade de produtos">
+                        </div>
+                        <button class="botaoAdicionarCarrinho" id="botaoAdicionarCarrinho">
+                            <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M21.765 7.236c-.258-3.775-3.346-6.486-7.121-6.225-1.986.126-3.676 1.596-4.451 3.586-.109.281-.351.472-.655.488L.303 6.839a.507.507 0 0 0-.302.464c.03.382.379.664.754.664h1.548l3.322 9.496c.135.386.509.644.934.644h9.824c.465 0 .88-.269 1.074-.692l4.535-10.316a.505.505 0 0 0-.038-.437zm-1.507-.614-4.486 10.205a.51.51 0 0 1-.474.307H7.522L4.22 7.41l-.057-.156c-.159-.413-.541-.67-.974-.67H1.58L2.77 5.09c.083-.267.33-.465.627-.488.01-.001.02-.001.03-.001.34-.012.656.201.79.52.068.175.234.295.424.295h10.98c.414 0 .761-.312.806-.724l.329-2.99c.066-.6.56-1.048 1.162-1.048.097 0 .19.012.283.035.545.128.899.661.77 1.202z"
+                                    fill="#FFF" fill-rule="nonzero">
+                                </path>
+                            </svg>
+                            <p id="botaoAdicionarTexto" class="textButtonCarrinho">Adicionar ao carrinho</p>
+                        </button>
+                    </div><!--especialidades-box-->
+                    
+                    <div class="especialidades-box">
+                        <img src="/images/image-product-1-thumbnail.jpg" alt="" srcset="">
+                        <h1 class="titulo" id="titulo">Sneakers</h1>
+                        <p class="descricao"></p>
+                        <div class="info-preco">
+                            <div class="info-preco-desconto">
+                                <span class="preco" id="preco">$125.00</span>
+                                <span class="desconto">50%</span>
+                            </div>
+                            <span class="preco-cheio">$250.00</span>
+                        </div>
+                        <div class="quantidade">
+                            <img id="quantidade-menos" src="/images-cart/icon-minus.svg" alt="Diminuir quantidade de produtos">
+                            <span id="quantidade">1</span>
+                            <img id="quantidade-mais" src="/images-cart/icon-plus.svg" alt="Aumentar quantidade de produtos">
+                        </div>
+                        <button class="botaoAdicionarCarrinho" id="botaoAdicionarCarrinho">
+                            <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M21.765 7.236c-.258-3.775-3.346-6.486-7.121-6.225-1.986.126-3.676 1.596-4.451 3.586-.109.281-.351.472-.655.488L.303 6.839a.507.507 0 0 0-.302.464c.03.382.379.664.754.664h1.548l3.322 9.496c.135.386.509.644.934.644h9.824c.465 0 .88-.269 1.074-.692l4.535-10.316a.505.505 0 0 0-.038-.437zm-1.507-.614-4.486 10.205a.51.51 0 0 1-.474.307H7.522L4.22 7.41l-.057-.156c-.159-.413-.541-.67-.974-.67H1.58L2.77 5.09c.083-.267.33-.465.627-.488.01-.001.02-.001.03-.001.34-.012.656.201.79.52.068.175.234.295.424.295h10.98c.414 0 .761-.312.806-.724l.329-2.99c.066-.6.56-1.048 1.162-1.048.097 0 .19.012.283.035.545.128.899.661.77 1.202z"
+                                    fill="#FFF" fill-rule="nonzero">
+                                </path>
+                            </svg>
+                            <p id="botaoAdicionarTexto" class="textButtonCarrinho">Adicionar ao carrinho</p>
+                        </button>
+
+                    </div><!--especialidades-box-->
+                    <div class="especialidades-box">
+                        <img src="/images/image-product-1-thumbnail.jpg" alt="" srcset="">
+                        <h1 class="titulo" id="titulo">Sneakers</h1>
+                        <p class="descricao"></p>
+                        <div class="info-preco">
+                            <div class="info-preco-desconto">
+                                <span class="preco" id="preco">$125.00</span>
+                                <span class="desconto">50%</span>
+                            </div>
+                            <span class="preco-cheio">$250.00</span>
+                        </div>
+                        <div class="quantidade">
+                            <img id="quantidade-menos" src="/images-cart/icon-minus.svg" alt="Diminuir quantidade de produtos">
+                            <span id="quantidade">1</span>
+                            <img id="quantidade-mais" src="/images-cart/icon-plus.svg" alt="Aumentar quantidade de produtos">
+                        </div>
+                        <button class="botaoAdicionarCarrinho" id="botaoAdicionarCarrinho">
+                            <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M21.765 7.236c-.258-3.775-3.346-6.486-7.121-6.225-1.986.126-3.676 1.596-4.451 3.586-.109.281-.351.472-.655.488L.303 6.839a.507.507 0 0 0-.302.464c.03.382.379.664.754.664h1.548l3.322 9.496c.135.386.509.644.934.644h9.824c.465 0 .88-.269 1.074-.692l4.535-10.316a.505.505 0 0 0-.038-.437zm-1.507-.614-4.486 10.205a.51.51 0 0 1-.474.307H7.522L4.22 7.41l-.057-.156c-.159-.413-.541-.67-.974-.67H1.58L2.77 5.09c.083-.267.33-.465.627-.488.01-.001.02-.001.03-.001.34-.012.656.201.79.52.068.175.234.295.424.295h10.98c.414 0 .761-.312.806-.724l.329-2.99c.066-.6.56-1.048 1.162-1.048.097 0 .19.012.283.035.545.128.899.661.77 1.202z"
+                                    fill="#FFF" fill-rule="nonzero">
+                                </path>
+                            </svg>
+                            <p id="botaoAdicionarTexto" class="textButtonCarrinho">Adicionar ao carrinho</p>
+                        </button>
+                    </div><!--especialidades-box-->
+                </div><!--flex-->
+            </div><!-- interface -->
+        </section><!-- especialidades -->
+    </main>
+
+    
+    <footer>
+        <div class="interface">
+            <div class="redes-sociais">
+                <h3>Siga-nos</h3>
+                <div class="icons">
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-linkedin"></i>
+                </div>
+            </div>
+
+            <div class="endereco">
+                <h3>Contato</h3>
+                <ul>
+                    <li>Rua Sérgio Carneiro 128, Salvador - BA</li>
+                    <li>(71) 99999-9999</li>
+                    <li>contato@agenciabrn.com.br</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-CR9inERKyZwFJcNOe5D9u/1kZjHfH4OZ+g4QzVk7WvbCKx5QfsNAd2GQ3UKl6nBi" crossorigin="anonymous">
+    </script>
+    <!-- Custom JS -->
+    <script src="/Js/main.js"></script>
+    <script src="/Js/menu.js"></script>
+</body>
+
+</html>
